@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Ashu</title>
+  <title>jQuery $.Deferred()对象学习笔记 | Ashu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ashu">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="背景 - 为回调函数而生jQuery 1.5.0版本之前，回调函数的功能非常弱，deferred对象就是jQuery的回调函数解决方案。
+使用场景1.ajax链式用法jQuery中ajax的传统使用方式：123456789$.ajax(&amp;#123;	url: &apos;deferred.html&apos;,	success: function()&amp;#123;		// 成功	&amp;#125;,	error: funct">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery $.Deferred()对象学习笔记">
+<meta property="og:url" content="http://yoursite.com/2015/12/02/jQuery-Deferred-对象学习笔记/index.html">
 <meta property="og:site_name" content="Ashu">
-<meta property="og:description">
+<meta property="og:description" content="背景 - 为回调函数而生jQuery 1.5.0版本之前，回调函数的功能非常弱，deferred对象就是jQuery的回调函数解决方案。
+使用场景1.ajax链式用法jQuery中ajax的传统使用方式：123456789$.ajax(&amp;#123;	url: &apos;deferred.html&apos;,	success: function()&amp;#123;		// 成功	&amp;#125;,	error: funct">
+<meta property="og:updated_time" content="2015-12-02T06:06:05.596Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ashu">
-<meta name="twitter:description">
+<meta name="twitter:title" content="jQuery $.Deferred()对象学习笔记">
+<meta name="twitter:description" content="背景 - 为回调函数而生jQuery 1.5.0版本之前，回调函数的功能非常弱，deferred对象就是jQuery的回调函数解决方案。
+使用场景1.ajax链式用法jQuery中ajax的传统使用方式：123456789$.ajax(&amp;#123;	url: &apos;deferred.html&apos;,	success: function()&amp;#123;		// 成功	&amp;#125;,	error: funct">
   
     <link rel="alternative" href="/atom.xml" title="Ashu" type="application/atom+xml">
   
@@ -186,66 +190,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-前端冷知识" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/22/前端冷知识/" class="article-date">
-  	<time datetime="2015-12-22T09:35:08.000Z" itemprop="datePublished">2015-12-22</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/22/前端冷知识/">前端冷知识</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="chrome控制台console">chrome控制台console</h1><p>作为WEB开发者，调试时使用最频繁的是console.log(‘log info…’)<br>大家可以试试这样的，带警告标识的console<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.warn(<span class="string">'Whoo!Warning goes here...'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>还有这样的，带错误标识的console<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.error(<span class="string">'Whoo!Error goes here...'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>还能自带样式，比如这样的彩虹字<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(<span class="string">'%cRainbow Text '</span>, <span class="string">'background-image:-webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );color:transparent;-webkit-background-clip: text;font-size:5em;'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>当控制台内容太多，惹人厌时，可以使用clear方法<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.clear();</span><br></pre></td></tr></table></figure></p>
-<p>console API<br>| Format Specifier| Description |<br>| :—————| ———–:|<br>| %d or %i           | Formats the value as an integer.                             |<br>| %f             | Formats the value as a floating point value.                               |<br>| %o             | Formats the value as an expandable DOM element (as in the Elements panel). |<br>| %O             | Formats the value as an expandable JavaScript object.                      |<br>| %c             | Formats the output string according to CSS styles you provide.              |  </p>
-<h3 id="参考链接">参考链接</h3><p>前端不为人知的一面 - 前端冷知识集锦<br><a href="http://www.cnblogs.com/Wayou/p/things_you_dont_know_about_frontend.html" target="_blank" rel="external">http://www.cnblogs.com/Wayou/p/things_you_dont_know_about_frontend.html</a>  </p>
-<p>Console API Reference<br><a href="https://developer.chrome.com/devtools/docs/console-api" target="_blank" rel="external">https://developer.chrome.com/devtools/docs/console-api</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-jQuery-Deferred-对象学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-jQuery-Deferred-对象学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/12/02/jQuery-Deferred-对象学习笔记/" class="article-date">
@@ -261,12 +206,19 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/02/jQuery-Deferred-对象学习笔记/">jQuery $.Deferred()对象学习笔记</a>
+    <h1 class="article-title" itemprop="name">
+      jQuery $.Deferred()对象学习笔记
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -296,368 +248,51 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/12/22/前端冷知识/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          前端冷知识
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/12/02/CSS之vertical-align属性/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS之vertical-align属性</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-
-
-
-
-  
-    <article id="post-CSS之vertical-align属性" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/02/CSS之vertical-align属性/" class="article-date">
-  	<time datetime="2015-12-02T03:18:56.000Z" itemprop="datePublished">2015-12-02</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/02/CSS之vertical-align属性/">CSS之vertical-align属性</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-表单相关" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/30/表单相关/" class="article-date">
-  	<time datetime="2015-11-30T09:55:25.000Z" itemprop="datePublished">2015-11-30</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/30/表单相关/">表单相关</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-图片加载二三事" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/30/图片加载二三事/" class="article-date">
-  	<time datetime="2015-11-30T02:28:15.000Z" itemprop="datePublished">2015-11-30</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/30/图片加载二三事/">图片加载二三事</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Javascript-获取服务器时间" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/25/Javascript-获取服务器时间/" class="article-date">
-  	<time datetime="2015-11-25T05:49:11.000Z" itemprop="datePublished">2015-11-25</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/25/Javascript-获取服务器时间/">Javascript 获取服务器时间</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="背景">背景</h3><p>单页操作中，通常我们需要获取当前的时间节点，如倒计时操作。Javascript提供了Date()对象来获取客户端时间，但是客户端时间并不是恒定的，用户可以自行更改时间，这就导致每个用户的时间不一致。此时，我们需要一个恒定的服务器时间来保持用户见到的时间一致。<br>服务器的时间，通常由后台程序通过php、jsp等返回，但仅仅为了一个时间架一个后台程序，这是浪费生命的操作，绝不提倡。<br>目前，发现的最好的方法是ajax获取http的头部信息，由此来获取服务器时间。  </p>
-<h3 id="原理">原理</h3><p>下图为服务器响应请求返回的静态页面的HTTP头部信息，可以直接用ajax获取头部信息里的Date信息。<br><img src="\img\archives\20151125\ajax-header-response.jpg">  </p>
-<h3 id="实现">实现</h3><h5 id="Javascript版">Javascript版</h5><pre><code class="python">var xhr = new XMLHttpRequest();   
-<span class="keyword">if</span>( !xhr ){   
-  xhr = new ActiveXObject(<span class="string">'Microsoft.XMLHTTP'</span>);
-}   
-xhr.open(<span class="string">'HEAD'</span>,location.href,true);   
-xhr.onreadystatechange=function(){   
-    <span class="keyword">if</span>( xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span> ){   
-        alert(xhr.getResponseHeader(<span class="string">"Date"</span>));   
-    }   
-}   
-xhr.send(null);
-</code></pre>
-<p>当前服务器时间：<span id="J_serverTime"></span></p>
-<script>
-var xhr = new XMLHttpRequest();   
-if( !xhr ){   
-  //兼容处理  
-}   
-xhr.open("HEAD",location.href,true);   
-xhr.onreadystatechange=function(){   
-    if( xhr.readyState == 4 && xhr.status == 200 ){  
-        document.getElementById('J_serverTime').innerHTML = xhr.getResponseHeader("Date");
-    }   
-}   
-xhr.send(null);
-</script>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/25/hello-world/" class="article-date">
-  	<time datetime="2015-11-25T05:43:43.000Z" itemprop="datePublished">2015-11-25</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/25/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Well，第一篇当然要留给Hello world！</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Web-Frontend-Security" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/24/Web-Frontend-Security/" class="article-date">
-  	<time datetime="2015-11-24T09:33:00.000Z" itemprop="datePublished">2015-11-24</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/24/Web-Frontend-Security/">Web Frontend Security</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="WEB前端安全">WEB前端安全</h1><h3 id="参考链接：">参考链接：</h3><p>xss攻击入门<br><a href="http://www.cnblogs.com/bangerlee/archive/2013/04/06/3002142.html" target="_blank" rel="external">http://www.cnblogs.com/bangerlee/archive/2013/04/06/3002142.html</a><br>关于Web安全，99%的网站都忽略了这些<br><a href="https://blog.wilddog.com/?p=290" target="_blank" rel="external">https://blog.wilddog.com/?p=290</a><br>扒一扒HTTPS网站的内幕<br><a href="https://blog.wilddog.com/?p=210" target="_blank" rel="external">https://blog.wilddog.com/?p=210</a><br>前端安全冷门知识杂谈</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安全/">安全</a></li></ul>
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
 
 
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -681,8 +316,8 @@ xhr.send(null);
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
